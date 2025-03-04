@@ -9,8 +9,8 @@ const ContactInfo = () => {
         </Heading>
         <Flex 
           flexDir={{ base: "column", md: "row" }} 
-          justifyContent="center" // Zarovnání na střed
-          alignItems="center"     // Zarovnání na střed
+          justifyContent="center"
+          alignItems="center"
           gap={6} 
           mx="auto" 
           maxW="1200px"
@@ -19,7 +19,7 @@ const ContactInfo = () => {
           <Box flex="1" textAlign="center">
             <VStack align="center" spacing={3}>
               <Text fontWeight="bold" fontSize="lg">
-                Jméno Příjmení
+                Ing. Jana Dachsová
               </Text>
               <Text>Adresa firmy</Text>
               <Text>IČO: 12345678</Text>
@@ -31,11 +31,11 @@ const ContactInfo = () => {
             <VStack align="center" spacing={3}>
               <Flex align="center" justify="center">
                 <Icon as={FaPhone} boxSize={4} mr={2} color="blue.500" />
-                <Text>+420 123 456 789</Text>
+                <Text>+420 723 298 431</Text>
               </Flex>
               <Flex align="center" justify="center">
                 <Icon as={FaEnvelope} boxSize={4} mr={2} color="blue.500" />
-                <Text>info@firma.cz</Text>
+                <Text>dachsova.jana@seznam.cz</Text>
               </Flex>
               <Flex align="center" justify="center">
                 <Icon as={FaGlobe} boxSize={4} mr={2} color="blue.500" />
@@ -52,7 +52,7 @@ const ContactInfo = () => {
           <Box flex="1" textAlign="center">
             <Box w="100%" h="200px" bg="gray.100" borderRadius="md" overflow="hidden" mx="auto">
               <iframe 
-                src="https://www.google.com/maps/embed?..." 
+                src="https://en.frame.mapy.cz/s/damanoduha" 
                 width="100%" 
                 height="200" 
                 style={{ border: 0 }} 

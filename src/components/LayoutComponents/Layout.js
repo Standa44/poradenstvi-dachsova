@@ -1,19 +1,30 @@
 import React from 'react'
 import HeaderComponent from './HeaderComponent'
-import { Image } from '@chakra-ui/react'
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import Footer from './Footer'
 
 const Layout = ({ children }) => {
     return (
         <>
             <HeaderComponent />
-            <Image
-                    src="/images/background.webp" 
-                    alt="Background image" 
+            <Box position="relative" w="100%" h="50vh">
+                <Image
+                    src="/images/background.webp"
+                    alt="Background image"
                     w="100%"
-                    h="50vh"
-                    objectFit='cover' 
-                  />
+                    h="100%"
+                    objectFit="cover"
+                />
+                <Box display={["none", "none", "flex", "flex"]} position="absolute" left="10%"
+                    top="50%" transform="translateY(-50%)" bg="rgba(0, 0, 0, 0.7)"
+                    borderRadius="md" p={4} color="white" >
+                    <Flex flexDir="column">
+                        <Text fontSize="md" fontWeight="bold" w="300px">Daňové poradenství Dachsová,</Text>
+                        <Text fontSize="md" w="300px" tex>
+                        komplexní služby fyzickým a právnickým osobám v oblasti vedení účetnictví (dříve podvojné účetnictví), daňové evidence (dříve jednoduché účetnictví), zpracování mezd a daňového poradenství pro podnikatele, malé a střední firmy.                        </Text>
+                    </Flex>
+                </Box>
+            </Box>
             <div>{children}</div>
             <Footer />
         </>

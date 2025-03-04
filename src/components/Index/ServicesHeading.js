@@ -5,7 +5,7 @@ const ServicesHeading = () => {
     return (
         <>
             <Box>
-                <Heading size="lg" mx="auto" p={4} color="white" id="sluzby">
+                <Heading size="lg" mx="auto" p={4} id="sluzby">
                     Nabízené služby
                 </Heading>
             </Box>

@@ -12,10 +12,10 @@ const ServiceCard = ({text, heading}) => {
                 mr={{ base: 0, md: 4 }}
             />
             <Flex flexDir="column">
-                <Heading size="md" color="white" mb={2} >
+                <Heading size="md" mb={2} >
                     {heading}
                 </Heading>
-                <Text color="white" fontSize="md" wordBreak="break-word">{text}</Text>
+                <Text fontSize="md" wordBreak="break-word">{text}</Text>
             </Flex>
         </Flex>
     )

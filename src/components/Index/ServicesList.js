@@ -45,6 +45,7 @@ const ServicesList = ({ data }) => {
       flexWrap="wrap"
       align="center"
       p={4} flexDir={["column", "column", "row", "row"]}
+      bgColor="blue.400"
     >
       {data.map((item, index) => (
         <ServiceBox key={index} title={item.title} services={item.services} />

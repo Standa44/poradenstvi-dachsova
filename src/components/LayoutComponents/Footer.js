@@ -2,13 +2,15 @@ import { Box, Flex, Text, Icon, Link, VStack } from "@chakra-ui/react";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
+  const getCurrentYear = () => new Date().getFullYear();
+
   return (
     <Box bg="gray.800" color="white" py={6} px={4}>
       <Flex justify="space-between" flexDir={{ base: "column", md: "row" }} align="center">
         {/* Logo a copyright */}
         <VStack align="start">
-          <Text fontSize="lg" fontWeight="bold">LK DANĚ, s.r.o.</Text>
-          <Text fontSize="sm">© 2025 LK DANĚ, s.r.o. Všechna práva vyhrazena.</Text>
+          <Text fontSize="lg" fontWeight="bold">Ing. Jana Dachsová</Text>
+          <Text fontSize="sm">© {getCurrentYear()} Všechna práva vyhrazena.</Text>
         </VStack>
 
         {/* Rychlé odkazy */}

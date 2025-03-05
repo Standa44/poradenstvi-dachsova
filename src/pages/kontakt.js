@@ -3,7 +3,7 @@ import ContactInfo from '@/components/Index/ContactInfo'
 import { Box, Heading, Text } from '@chakra-ui/react'
 import React from 'react'
 
-const contact = () => {
+const Contact = () => {
   return (
     <>
     <ContactInfo />
@@ -22,4 +22,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact

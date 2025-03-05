@@ -1,5 +1,4 @@
 import AboutMe from "@/components/Index/AboutMe";
-import NabidkaSluzebIkony from "@/components/Index/NabidkaSluzebIkony";
 import ReferenceSection from "@/components/Index/ReferenceSection";
 import ServiceOverview from "@/components/Index/ServiceOverview";
 import { Box } from "@chakra-ui/react";

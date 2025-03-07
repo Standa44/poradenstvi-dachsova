@@ -1,10 +1,11 @@
 import React from 'react'
-import { Box, Button, Flex, Heading } from '@chakra-ui/react';
+import { Box, Heading } from '@chakra-ui/react';
 import { danovaEvidence } from "@/components/Sluzby/danovaEvidence";
 import { ucetnictvi } from '@/components/Sluzby/ucetnictvi';
 import { mzdovaAgenda } from '@/components/Sluzby/mzdovaAgenda';
 import ServiceSection from '@/components/Sluzby/ServiceSection';
 import { danovePoradenstvi } from '@/components/Sluzby/danovePoradenstvi';
+import PriceButton from '@/components/Sluzby/PriceButton';
 
 const sluzby = () => {
   return (
@@ -15,12 +16,7 @@ const sluzby = () => {
         <ServiceSection heading="MZDOVÁ AGENDA" text={mzdovaAgenda} id="mzdova-agenda"/>
         <ServiceSection heading="DAŇOVÉ PORADENSTVÍ" text={danovePoradenstvi} id="danove-poradenstvi"/>
         <ServiceSection heading="Roční závěrky" id="rocni-zaverky"/>
-
-        <Flex w="100%" justifyContent="flex-end">
-            <Button as="a" href="/cenik" colorScheme="blue" variant="solid" size="lg" mt={4}>
-                Ceník služeb
-            </Button>
-            </Flex>
+        <PriceButton />
     </Box>
     )
 }

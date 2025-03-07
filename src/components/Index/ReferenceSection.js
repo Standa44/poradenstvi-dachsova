@@ -20,31 +20,16 @@ const references = [
 ];
 
 const ReferenceSection = () => {
+
   return (
-    <Flex 
-  maxW="1200px" 
-  mx="auto" 
-  p={6} 
-  flexWrap="wrap" 
-  justify="center" 
-  gap={6}
->
-  {references.map((ref, index) => (
-    <Box
-      key={index}
-      p={5}
-      shadow="md"
-      borderRadius="lg"
-      bg="gray.50"
-      textAlign="center"
-      flex="1 1 300px"  // Dynamická šířka, min. 300px
-      maxW="350px"
-    >
-      <Image src={ref.logo} alt="Logo firmy" mx="auto" mb={4} maxH="50px" />
-      <Text>{ref.text}</Text>
-    </Box>
-  ))}
-</Flex>
+    <Flex maxW="1200px" mx="auto" p={6} flexWrap="wrap" justify="center" gap={6}>
+      {references.map((ref, index) => (
+        <Box key={index} p={5} shadow="md" maxW="350px" borderRadius="lg" bg="gray.50" textAlign="center" flex="1 1 300px" >
+          <Image src={ref.logo} alt="Logo firmy" mx="auto" mb={4} maxH="50px" />
+          <Text>{ref.text}</Text>
+        </Box>
+      ))}
+    </Flex>
 
   );
 };

@@ -1,12 +1,23 @@
 import {
   Box, Flex, IconButton, Drawer, DrawerBody, DrawerOverlay, DrawerContent, DrawerCloseButton,
-  useDisclosure, VStack, Heading, Image
+  useDisclosure, VStack, Heading, Image,
+  Text
 } from "@chakra-ui/react";
 import Link from 'next/link';
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { useRouter } from 'next/router';
+
 
 const HeaderComponent = () => {
+  const router = useRouter();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const navLinks = [
+    { path: "/", text: "Úvodní stránka" },
+    { path: "/sluzby", text: "Služby" },
+    { path: "/cenik", text: "Ceník" },
+    { path: "/kontakt", text: "Kontakt" }
+  ];
+
 
   return (
     <Box as="header" bg="white" shadow="md" px={4}>
@@ -25,18 +36,32 @@ const HeaderComponent = () => {
 
         {/* Desktop Navigation */}
         <Flex as="nav" gap={8} display={{ base: "none", md: "flex" }} whiteSpace="nowrap">
-          <Link href="/" fontWeight="medium" mx={2}>
-            Úvodní stránka
-          </Link>
-          <Link href="sluzby" fontWeight="medium" mx={2}>
-            Služby
-          </Link>
-          <Link href="cenik" fontWeight="medium" mx={2}>
-            Ceník
-          </Link>
-          <Link href="kontakt" fontWeight="medium" mx={2}>
-            Kontakt
-          </Link>
+          {navLinks.map((link, index) => {
+            const isActive = router.asPath === link.path;
+
+            return (
+              <Link key={index} href={link.path} mx={2}>
+                <Text
+                  position="relative"
+                  fontWeight="medium"
+                  color={isActive ? "black.600" : "gray.600"}
+                  _after={{
+                    content: '""',
+                    position: "absolute",
+                    bottom: "-2px",
+                    left: "0",
+                    width: isActive ? "100%" : "0",
+                    height: "2px",
+                    bg: "gray.600",
+                    transition: "width 0.3s",
+                  }}
+                  _hover={{ color: "gray.600", _after: { width: "100%" } }}
+                >
+                  {link.text}
+                </Text>
+              </Link>
+            );
+          })}
         </Flex>
 
         {/* Mobile Menu Icon */}
@@ -61,18 +86,7 @@ const HeaderComponent = () => {
           <DrawerCloseButton />
           <DrawerBody>
             <VStack as="nav" spacing={4} mt={10}>
-              <Link href="/" passHref onClick={onClose} fontSize="lg">
-                Domů
-              </Link>
-              <Link href="/sluzby" passHref onClick={onClose} fontSize="lg">
-                Služby
-              </Link>
-              <Link href="/cenik" passHref onClick={onClose} fontSize="lg">
-                Ceník
-              </Link>
-              <Link href="/kontakt" passHref onClick={onClose} fontSize="lg">
-                Kontakt
-              </Link>
+              {navLinks.map((link, index) => (<Link href={link.path} onClick={onClose} fontSize="lg" key={index}>{link.text}</Link>))}
             </VStack>
           </DrawerBody>
         </DrawerContent>

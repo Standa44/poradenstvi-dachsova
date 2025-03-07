@@ -6,15 +6,13 @@ import { Box } from "@chakra-ui/react";
 
 export default function Home() {
 
-  
-
   return (
     <>
-     <AboutMe />
-     <Box w="80%" m="auto" borderTop="2px solid #4299e1"></Box>
-     <ServiceOverview />
-     <Box w="80%" m="auto" borderTop="2px solid #4299e1"></Box>
-     <ReferenceSection />
+      <AboutMe />
+      <Box w="80%" m="auto" borderTop="2px solid #4299e1"></Box>
+      <ServiceOverview />
+      <Box w="80%" m="auto" borderTop="2px solid #4299e1"></Box>
+      <ReferenceSection />
     </>
   );
 }

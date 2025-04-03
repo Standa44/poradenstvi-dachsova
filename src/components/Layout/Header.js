@@ -8,7 +8,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { useRouter } from 'next/router';
 
 
-const HeaderComponent = () => {
+const Header = () => {
   const router = useRouter();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navLinks = [
@@ -16,9 +16,9 @@ const HeaderComponent = () => {
     { path: "/sluzby", text: "Služby" },
     { path: "/cenik", text: "Ceník" },
     { path: "/kontakt", text: "Kontakt" }
-  ];
+  ]
 
-
+  //Vytvořit např. komponentu NavLink kde předám pathu s textem
   return (
     <Box as="header" bg="white" shadow="md" px={4}>
       <Flex h={20} alignItems="center"
@@ -95,4 +95,4 @@ const HeaderComponent = () => {
   );
 };
 
-export default HeaderComponent;
+export default Header;

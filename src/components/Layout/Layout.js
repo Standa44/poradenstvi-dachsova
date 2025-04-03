@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderComponent from './HeaderComponent'
+import HeaderComponent from './Header'
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import Footer from './Footer'
 

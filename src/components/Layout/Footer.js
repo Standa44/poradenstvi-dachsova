@@ -1,15 +1,7 @@
 import { Box, Flex, Text, Link, VStack } from "@chakra-ui/react";
-import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
-import SocialLinks from "./SocialLinks";
 
 const Footer = () => {
   const getCurrentYear = () => new Date().getFullYear();
-  const socialLinks = [
-    { icon: FaFacebook, url: "https://facebook.com" },
-    { icon: FaLinkedin, url: "https://linkedin.com" },
-    { icon: FaTwitter, url: "https://twitter.com" }
-  ];
-  
 
   return (
     <Box bg="gray.800" color="white" py={6} px={4}>
@@ -24,7 +16,8 @@ const Footer = () => {
           <Link href="#o-me" fontSize="sm">O nás</Link>
           <Link href="#kontakt" fontSize="sm">Kontakt</Link>
         </VStack>
-        <SocialLinks links={socialLinks} />
+        {/*Sjendotit naming, cz -> en 
+          pridat prettier*/}
       </Flex>
     </Box>
   );

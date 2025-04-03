@@ -1,66 +1,60 @@
-import { Box, Flex, Heading, Text, Icon, VStack } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import { FaPhone, FaEnvelope, FaGlobe, FaClock } from "react-icons/fa";
-import ContactInfoName from "../Kontakt/ContactInfoName";
+import ContactInfoItem from "../Kontakt/ContactInfoItem";
 
 const ContactInfo = () => {
 
-  const nameData = [
-    {
-      heading: "Ing. Jana Dachsová",
-      items: [
-        { text: "Adresa firmy" },
-        { text: "IČO: 12345678" }
-      ]
-    }
-  ];
-  
-  const businessData = [
-    {
-      items: [
-        { icon: FaPhone, text: "+420 723 298 431" },
-        { icon: FaEnvelope, text: "dachsova.jana@seznam.cz" },
-        { icon: FaGlobe, text: "www.firma.cz" },
-        { icon: FaClock, text: "Po-Pá: 8:00-16:00" }
-      ]
-    }
-  ];
-  
+  return (
+    <Box bg="white" py={10} px={4} id="kontakt">
+      <Heading size="lg" textAlign="center" mb={8}>
+        Kontaktní informace
+      </Heading>
+      <Flex
+        flexDir={{ base: "column", md: "row" }}
+        alignItems="center"
+        gap={6}
+        mx="auto"
+        maxW="1200px"
+      >
+        {/* First column */}
+        <Box flex="1" >
+          <VStack spacing={3}>
+            <Text fontWeight="bold" fontSize="lg">
+              Ing. Jana Dachsová
+            </Text>
+            <Text>Adresa firmy</Text>
+            <Text>IČO: 12345678</Text>
+          </VStack>
+        </Box>
 
-    return (
-      <Box bg="white" py={10} px={4} id="kontakt">
-        <Heading size="lg" textAlign="center" mb={8}>
-          Kontaktní informace
-        </Heading>
-        <Flex 
-          flexDir={{ base: "column", md: "row" }} 
-          justifyContent="center"
-          alignItems="center"
-          gap={6} 
-          mx="auto" 
-          maxW="1200px"
-        >
-          
-          <ContactInfoName data={nameData[0]} />
-          <ContactInfoName data={businessData[0]} />
-  
-          {/* Třetí sloupec */}
-          <Box flex="1" textAlign="center">
-            <Box w="100%" h="200px" bg="gray.100" borderRadius="md" overflow="hidden" mx="auto">
-              <iframe 
-                src="https://en.frame.mapy.cz/s/damanoduha" 
-                width="100%" 
-                height="200" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy" 
-                title="Mapa"
-              ></iframe>
-            </Box>
+        {/* Second column */}
+        <Box flex="1" textAlign="center">
+          <VStack spacing={3} >
+            <ContactInfoItem icon={FaPhone}>+420 723 298 431</ContactInfoItem>
+            <ContactInfoItem icon={FaEnvelope}>dachsova.jana@seznam.cz</ContactInfoItem>
+            <ContactInfoItem icon={FaGlobe}>www.firma.cz</ContactInfoItem>
+            <ContactInfoItem icon={FaClock}>Po-Pá: 8:00-16:00</ContactInfoItem>
+          </VStack>
+        </Box>
+
+        {/* Third column */}
+        <Box flex="1" textAlign="center">
+          <Box w="100%" h="200px" bg="gray.100" borderRadius="md" overflow="hidden" mx="auto">
+            <iframe
+              src="https://en.frame.mapy.cz/s/damanoduha"
+              width="100%"
+              height="200"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              title="Mapa" 
+            />
           </Box>
-        </Flex>
-      </Box>
-    );
-  };
-  
+        </Box>
+      </Flex>
+    </Box>
+  );
+};
+
 
 export default ContactInfo;

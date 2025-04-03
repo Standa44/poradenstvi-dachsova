@@ -5,12 +5,10 @@ const AboutMe = () => {
         <Flex w="100%" maxW="1200px" mx="auto" py={10} px={6} align="center" justify="space-between" flexWrap="wrap" justifyContent="center">
             <Flex mx="auto">
                 <Image
-                    src="https://dummyimage.com/250x250"
+                    src="/images/profile-foto.png"
                     alt="Ing. Jana Dachsová"
-                    boxSize="250px"
-                    borderRadius="full"
+                    maxW="200px"
                     objectFit="cover"
-                    m="10px"
                 />
             </Flex>
             <Flex maxW="600px" ml={{ base: 0, md: 10 }} mt={{ base: 6, md: 0 }} flexDir="column">

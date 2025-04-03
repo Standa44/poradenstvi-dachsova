@@ -1,8 +1,8 @@
 import { Box, Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import { FaPhone, FaEnvelope, FaGlobe, FaClock } from "react-icons/fa";
-import ContactInfoItem from "../Kontakt/ContactInfoItem";
+import ContactInfoItem from "./ContactInfoItem";
 
-const ContactInfo = () => {
+const ContactInfoSection = () => {
 
   return (
     <Box bg="white" py={10} px={4} id="kontakt">
@@ -57,4 +57,4 @@ const ContactInfo = () => {
 };
 
 
-export default ContactInfo;
+export default ContactInfoSection;

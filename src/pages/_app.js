@@ -15,9 +15,9 @@ export default function App({ Component, pageProps }) {
         <meta name="robots" content="all"></meta>
         <meta property="og:title" content="Daňové poradenství Dachsová" />
         <meta property="og:description" content="Profesionální daňové poradenství pro podnikatele a firmy." />
-        <meta property="og:image" content="/preview.jpg" />
+        <meta property="og:image" content="/images/logo-da-meta.png" />
         <meta property="og:url" content="https://www.poradenstvi-dachsova.cz" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/logo-da-meta.png" type="image/png" />
       </Head>
       <ChakraProvider>
         <Layout>

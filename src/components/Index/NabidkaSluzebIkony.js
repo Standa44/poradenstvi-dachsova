@@ -16,7 +16,7 @@ const NabidkaSluzebIkony = () => {
     <Flex w="100%" wrap="wrap">
         {services.map((service, index) => (
         <Flex justify="space-between" m="auto" key={index} textAlign="center" p="25px" flexDir="column">
-            <Flex >
+            <Flex>
             <Icon as={service.icon} m="20px"
                 fontSize="60px" color="blue.200" 
                 _hover={{ color: "blue.400" }}

@@ -22,7 +22,7 @@ const Header = () => {
         top="0" zIndex="20"
       >
         <Flex alignItems="center">
-          <Image src="images/komora-danovych-poradcu-logo.png" w={{ base: "15%", md: "10%" }} />
+          <Image src="images/logo-kdp.jpg" w="100%" objectFit='cover' maxW={{ base: '8%', md: '40px' }}  />
           {/* <Image src="images/logo-da.png" w={{ base: "15%", md: "20%" }} pl="20px" /> */}
           <Box fontWeight="bold" fontSize="lg" ml={4}>
             <Heading size="md">Ing. Jana Dachsová</Heading>

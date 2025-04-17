@@ -12,11 +12,7 @@ const references = [
   {
     logo: "https://dummyimage.com/250x250",
     text: "Kvalitní zpracování daňových přiznání a poradenství na vysoké úrovni.",
-  },
-  {
-    logo: "https://dummyimage.com/250x250",
-    text: "Kvalitní zpracování daňových přiznání a poradenství na vysoké úrovni.",
-  },
+  }
 ];
 
 const ReferenceSection = () => {

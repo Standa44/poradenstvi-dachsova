@@ -3,18 +3,17 @@ import { FaBalanceScale, FaFileInvoiceDollar, FaUsers, FaCalendarCheck, FaFileAl
 import NextLink from "next/link";
 import { Flex, Text, Icon, LinkBox } from "@chakra-ui/react";
 
+const serviceList = [
+    { label: "Daňové poradenství", link: "/sluzby#danova-evidence", icon: FaBalanceScale },
+    { label: "Vedení účetnictví", link: "/sluzby#ucetnictvi", icon: FaFileInvoiceDollar },
+    { label: "Mzdová agenda", link: "/sluzby#mzdova-agenda", icon: FaUsers },
+    { label: "Roční závěrky", link: "/sluzby#rocni-zaverky", icon: FaCalendarCheck },
+    { label: "Daňová přiznání", link: "/sluzby#danove-poradenstvi", icon: FaFileAlt },
+]
+
 const ServiceOverview = () => {
-
-    const serviceList = [
-        { label: "Daňové poradenství", link: "/sluzby#danova-evidence", icon: FaBalanceScale },
-        { label: "Vedení účetnictví", link: "/sluzby#ucetnictvi", icon: FaFileInvoiceDollar },
-        { label: "Mzdová agenda", link: "/sluzby#mzdova-agenda", icon: FaUsers },
-        { label: "Roční závěrky", link: "/sluzby#rocni-zaverky", icon: FaCalendarCheck },
-        { label: "Daňová přiznání", link: "/sluzby#danove-poradenstvi", icon: FaFileAlt },
-    ]
-
     return (
-        <Flex w="100%" maxW="1200px" mx="auto" py={10} px={6} flexWrap="wrap" justify="center">
+        <Flex w="80%" mx="auto" py={3} flexWrap="wrap" justify="center">
             {serviceList.map((service, index) => (
                 <LinkBox
                     key={index}

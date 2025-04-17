@@ -1,5 +1,5 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
-import SubPageHeading from "./SubPageHeading";
+import SubPageHeading from "../CommonLib/SubPageHeading";
 
 const AboutMe = () => {
     return (

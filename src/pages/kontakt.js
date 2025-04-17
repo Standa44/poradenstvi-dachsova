@@ -1,4 +1,4 @@
-import SubPageHeading from '@/components/Index/SubPageHeading'
+import SubPageHeading from '@/components/CommonLib/SubPageHeading'
 import ContactForm from '@/components/Kontakt/ContactForm'
 import ContactInfoSection from '@/components/Kontakt/ContactInfoSection'
 import { Box } from '@chakra-ui/react'

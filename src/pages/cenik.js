@@ -1,12 +1,13 @@
 import { priceList } from "@/components/Cenik/priceList";
 import PriceSection from "@/components/Cenik/PriceSection";
+import SubPageHeading from "@/components/Index/SubPageHeading";
 import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 
 const Cenik = () => {
 
   return (
     <Box maxW="800px" mx="auto" p={6}>
-      <Heading size="lg" textAlign="center" mb={4}>Ceník služeb</Heading>
+      <SubPageHeading id="cenik">Ceník služeb</SubPageHeading>
       <Text mb={6}>Ceny jsou stanovené individuálně po dohodě s klientem podle množství dokladů, odvětví a náročnosti zpracování.</Text>
       <PriceSection priceList={priceList} />
 

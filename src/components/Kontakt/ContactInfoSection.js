@@ -1,14 +1,11 @@
-import { Box, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 import { FaPhone, FaEnvelope, FaGlobe, FaClock } from "react-icons/fa";
 import ContactInfoItem from "./ContactInfoItem";
 
 const ContactInfoSection = () => {
 
   return (
-    <Box bg="white" py={10} px={4} id="kontakt">
-      <Heading size="lg" textAlign="center" mb={8}>
-        Kontaktní informace
-      </Heading>
+    <>
       <Flex
         flexDir={{ base: "column", md: "row" }}
         alignItems="center"
@@ -52,7 +49,7 @@ const ContactInfoSection = () => {
           </Box>
         </Box>
       </Flex>
-    </Box>
+    </>
   );
 };
 

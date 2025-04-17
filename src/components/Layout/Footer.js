@@ -17,7 +17,7 @@ const Footer = () => {
           <Link href="#kontakt" fontSize="sm">Kontakt</Link>
         </VStack>
         {/*Sjendotit naming, cz -> en 
-          pridat prettier*/}
+          pridat prettier  */}
       </Flex>
     </Box>
   );

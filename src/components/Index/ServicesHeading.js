@@ -1,15 +1,11 @@
-import { Box, Heading } from '@chakra-ui/react'
+import { Heading } from '@chakra-ui/react'
 import React from 'react'
 
-const ServicesHeading = () => {
+const ServicesHeading = ({ id, children }) => {
     return (
-        <>
-            <Box>
-                <Heading size="lg" mx="auto" p={4} id="sluzby">
-                    Nabízené služby
-                </Heading>
-            </Box>
-        </>
+        <Heading size="md" mb={3} textTransform="uppercase" id={id}>
+            {children}
+        </Heading>
     )
 }
 
